@@ -1,0 +1,8 @@
+#!/bin/bash
+
+sudo yum install -y epel-release
+
+sudo yum install -y openssl shellinabox
+sudo cat /etc/sysconfig/shellinaboxd
+sudo service shellinaboxd start
+sudo netstat -nap | grep shellinabox
