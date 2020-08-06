@@ -15,7 +15,7 @@ yum install -y git wget python
 sleep 5
 git clone https://github.com/teamclairvoyant/hadoop-deployment-bash
 sleep 2
-cd /root/hadoop-deployment-bash/
+cd /root/headshotclouderamanager/hadoop-deployment-bash/
 sleep 2
 echo ######################################################################
 echo Which JDK do you want to install in this machine just write 7 or 8 ?
@@ -72,7 +72,7 @@ CMVER=$cmver
 echo "We are using CM Version as"
 echo $cmver
 
-cd /root/hadoop-deployment-bash/
+cd /root/headshotclouderamanager/hadoop-deployment-bash/
 
 echo Installing cloudera manager agent for given CMSERVER 
 
@@ -87,7 +87,7 @@ echo Installing cloudera manager agent for given CMSERVER
 #CMVER=5.10.2
 CMVER=$cmver
 echo This will take some time relax.
-cd /root/hadoop-deployment-bash/
+cd /root/headshotclouderamanager/hadoop-deployment-bash/
 ./install_clouderamanagerserver.sh embedded $CMVER
 echo #####################
 echo You did fantastic job . Please point your favourite browser to http://Public Ip:7180 after 5 minutes and login with admin/admin.
