@@ -9,7 +9,7 @@ read cmver
 echo ######################################################################
 echo Hello $varname , Welcome to pre-requisites set up for any Hadoop installation 
 echo ######################################################################
-
+start=$(date +%s.%N)
 
 yum install -y git wget python
 sleep 5
@@ -89,5 +89,12 @@ CMVER=$cmver
 echo This will take some time relax.
 cd /root/headshotclouderamanager/hadoop-deployment-bash/
 ./install_clouderamanagerserver.sh embedded $CMVER
-echo #####################
+echo ###################################
+echo ###################################
+echo ###################################
+
+duration=$(echo "$(date +%s.%N) - $start" | bc)
+execution_time=`printf "%.2f seconds" $duration`
+
+echo "Script Execution Time: $execution_time"
 echo You did fantastic job . Please point your favourite browser to http://Public Ip:7180 after 5 minutes and login with admin/admin.
